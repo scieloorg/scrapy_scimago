@@ -32,7 +32,7 @@ class MongoDBPipeline(object):
         root = etree.Element('SCIMAGOLIST')
 
         for key, value in self.scimago_ids.items():
-            item = etree.Element('item')
+            item = etree.Element('title')
             item.set('ISSN', key.replace('-', ''))
             item.set('SCIMAGO_ID', value)
             root.append(item)
